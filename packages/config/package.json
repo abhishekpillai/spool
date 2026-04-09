@@ -1,0 +1,19 @@
+{
+  "name": "@spool/config",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./tailwind": "./tailwind.config.ts",
+    "./typescript/base": "./tsconfig.base.json",
+    "./typescript/nextjs": "./tsconfig.nextjs.json",
+    "./typescript/node": "./tsconfig.node.json",
+    "./env": {
+      "types": "./src/env.ts",
+      "default": "./src/env.ts"
+    }
+  },
+  "dependencies": {
+    "zod": "^3.23.0"
+  }
+}
