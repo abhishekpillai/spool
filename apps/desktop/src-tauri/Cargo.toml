@@ -1,0 +1,26 @@
+[package]
+name = "spool-desktop"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tauri = { version = "2", features = ["macos-private-api"] }
+tauri-plugin-deep-link = "2"
+tauri-plugin-single-instance = "2"
+tauri-plugin-shell = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["full"] }
+anyhow = "1"
+scap = "0.2"
+cpal = "0.15"
+dirs = "6"
+chrono = "0.4"
+hex = "0.4"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[lib]
+name = "spool_desktop_lib"
+crate-type = ["lib", "cdylib", "staticlib"]
